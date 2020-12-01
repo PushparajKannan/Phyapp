@@ -155,77 +155,85 @@ public class PhyHistoryActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<PhyHistoryModel> call, Response<PhyHistoryModel> response) {
 
-
-                Log.i("Responce",response.raw().toString());
-
-
-                String sucess,error;
-
-                sucess= String.valueOf(response.body().getSuccess());
-
-                if(sucess.equals("1")){
-                    hidepDialog();
-
-                    pname=response.body().getSrc();
-
-                    if (!pname.isEmpty() && pname.size()!=0){
-
-                        // hidepDialog();
+                try {
+                    Log.i("Responce",response.raw().toString());
 
 
-                        if( layouts.getVisibility()==View.VISIBLE){
-                            //button.setVisibility(View.GONE);
-                            layouts.setVisibility(View.GONE);
+                    String sucess,error;
+
+                    sucess= String.valueOf(response.body().getSuccess());
+
+                    if(sucess.equals("1")){
+                        hidepDialog();
+
+                        pname=response.body().getSrc();
+
+                        if (!pname.isEmpty() && pname.size()!=0){
+
+                            // hidepDialog();
+
+
+                            if( layouts.getVisibility()==View.VISIBLE){
+                                //button.setVisibility(View.GONE);
+                                layouts.setVisibility(View.GONE);
+
+                            }
+
+
+                            itemsAdapter = new RecyclerHistroyAdapter(PhyHistoryActivity.this, pname, null);
+
+                            clv.setAdapter(itemsAdapter);
+
+                            itemsAdapter.notifyDataSetChanged();
+
+                            int resId = R.anim.layout_animation_fall_down;
+                            int resIdright = R.anim.layout_animation_from_right;
+                            LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(PhyHistoryActivity.this, resId);
+
+
+                            clv.setLayoutAnimation(animation);
+
+
+                        }else {
+
+                            // itemsAdapter = new RecyclerHistroyAdapter(PhyHistoryActivity.this, pname, null);
+
+                            // clv.setAdapter(itemsAdapter);
+
+                            itemsAdapter.notifyDataSetChanged();
 
                         }
 
 
-                        itemsAdapter = new RecyclerHistroyAdapter(PhyHistoryActivity.this, pname, null);
+                    }else if(sucess.equals("0")){
+                        hidepDialog();
 
-                        clv.setAdapter(itemsAdapter);
+                        error=response.body().getErrorMsg();
 
-                        itemsAdapter.notifyDataSetChanged();
+                        Log.i("error",error);
 
-                        int resId = R.anim.layout_animation_fall_down;
-                        int resIdright = R.anim.layout_animation_from_right;
-                        LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(PhyHistoryActivity.this, resId);
-
-
-                        clv.setLayoutAnimation(animation);
-
-
-                    }else {
-
-                       // itemsAdapter = new RecyclerHistroyAdapter(PhyHistoryActivity.this, pname, null);
-
-                       // clv.setAdapter(itemsAdapter);
+                        pname.clear();
 
                         itemsAdapter.notifyDataSetChanged();
+
+
 
                     }
 
 
-                }else if(sucess.equals("0")){
+
+                }catch (Exception e)
+                {
                     hidepDialog();
 
-                    error=response.body().getErrorMsg();
-
-                    Log.i("error",error);
-
-                    pname.clear();
-
-                    itemsAdapter.notifyDataSetChanged();
-
-
-
                 }
-
 
 
             }
 
             @Override
             public void onFailure(Call<PhyHistoryModel> call, Throwable t) {
+                hidepDialog();
 
             }
         });

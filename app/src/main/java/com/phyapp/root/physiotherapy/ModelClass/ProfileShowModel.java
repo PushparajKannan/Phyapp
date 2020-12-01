@@ -27,7 +27,7 @@ public class ProfileShowModel {
 
 @SerializedName("image")
     @Expose
-    private String image;
+    private String image="";
 
     @SerializedName("message")
     @Expose

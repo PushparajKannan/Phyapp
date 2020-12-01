@@ -286,29 +286,48 @@ public class E4Fragment extends Fragment {
             @Override
             public void onResponse(Call<PatientHistoryModel> call, Response<PatientHistoryModel> response) {
 
-                Log.i("Responce", response.raw().toString());
+                try {
+                    Log.i("Responce", response.raw().toString());
 
 
-                String sucess="0", error;
+                    String sucess="0", error;
 
-                sucess = String.valueOf(response.body().getSuccess());
+                    sucess = String.valueOf(response.body().getSuccess());
 
-                if (sucess.equals("1")) {
-                    hidepDialog();
+                    if (sucess.equals("1")) {
+                        hidepDialog();
 
-                    pname = response.body().getSrc();
+                        pname = response.body().getSrc();
 
-                    if (!pname.isEmpty() && pname.size() != 0) {
+                        if (!pname.isEmpty() && pname.size() != 0) {
 
-                        // hidepDialog();
+                            // hidepDialog();
 
-                        if (layouts.getVisibility() == View.VISIBLE) {
-                            //button.setVisibility(View.GONE);
-                            layouts.setVisibility(View.GONE);
+                            if (layouts.getVisibility() == View.VISIBLE) {
+                                //button.setVisibility(View.GONE);
+                                layouts.setVisibility(View.GONE);
 
-                        }
+                            }
 
-                        if (getActivity() != null) {
+                            if (getActivity() != null) {
+
+                                itemsAdapter = new PatientHistoryAdapter(E4Fragment.this.getActivity(), pname, null);
+
+                                clv.setAdapter(itemsAdapter);
+
+                                itemsAdapter.notifyDataSetChanged();
+
+                                int resId = R.anim.layout_animation_fall_down;
+                                int resIdright = R.anim.layout_animation_from_right;
+                                LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(getContext(), resId);
+
+
+                                clv.setLayoutAnimation(animation);
+                            } else {
+                                // Toast.makeText(getActivity(), "null Activity", Toast.LENGTH_SHORT).show();
+                            }
+
+                        } else {
 
                             itemsAdapter = new PatientHistoryAdapter(E4Fragment.this.getActivity(), pname, null);
 
@@ -316,39 +335,27 @@ public class E4Fragment extends Fragment {
 
                             itemsAdapter.notifyDataSetChanged();
 
-                            int resId = R.anim.layout_animation_fall_down;
-                            int resIdright = R.anim.layout_animation_from_right;
-                            LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(getContext(), resId);
-
-
-                            clv.setLayoutAnimation(animation);
-                        } else {
-                            // Toast.makeText(getActivity(), "null Activity", Toast.LENGTH_SHORT).show();
                         }
 
-                    } else {
 
-                        itemsAdapter = new PatientHistoryAdapter(E4Fragment.this.getActivity(), pname, null);
+                    } else if (sucess.equals("0")) {
+                        hidepDialog();
 
-                        clv.setAdapter(itemsAdapter);
+                        error = response.body().getErrorMsg();
 
+                        Log.i("error", error);
+                        pname.clear();
                         itemsAdapter.notifyDataSetChanged();
 
+
+
                     }
-
-
-                } else if (sucess.equals("0")) {
+                }catch (Exception e)
+                {
                     hidepDialog();
 
-                    error = response.body().getErrorMsg();
-
-                    Log.i("error", error);
-                    pname.clear();
-                    itemsAdapter.notifyDataSetChanged();
-
-
-
                 }
+
 
 
                 // itemsAdapter = new ClasicRecyclerAdapter(MainFragment.this.getActivity(), pname, null);
@@ -359,6 +366,7 @@ public class E4Fragment extends Fragment {
 
             @Override
             public void onFailure(Call<PatientHistoryModel> call, Throwable t) {
+                hidepDialog();
 
 
             }

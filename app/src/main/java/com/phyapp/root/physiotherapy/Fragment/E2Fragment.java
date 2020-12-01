@@ -165,7 +165,7 @@ public class E2Fragment extends Fragment{
             @Override
             public void onResponse(Call<ProfileShowModel> call, Response<ProfileShowModel> response) {
 
-                Log.i("Responce",response.raw().toString());
+                Log.i("Responce",response.body().toString());
 
                 Log.i("Responcefull",response.toString());
 
@@ -228,9 +228,9 @@ public class E2Fragment extends Fragment{
                                 Log.i("address",address);
                                 Log.i("email",email);
                                 Log.i("phone",phone);
-                                //Log.i("image",proimg);
+                                Log.i("image",proimg);
 
-                                if(!proimg.isEmpty())
+                                if(!proimg.equalsIgnoreCase(""))
                                     Glide.with(context).load(proimg).asBitmap().diskCacheStrategy(DiskCacheStrategy.ALL).placeholder(R.drawable.person).into(profilepic);
 
 
