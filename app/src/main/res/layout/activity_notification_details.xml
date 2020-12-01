@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/apps_appointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_appointment"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs_appointment"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#FFFFFF"
+            app:tabIndicatorHeight="2dp"
+            style="@style/MyTabLayoutTextAppearance"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+
+
+
+
+
+    <FrameLayout
+        android:id="@+id/change_appointments"
+        android:layout_below="@id/apps_appointment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>

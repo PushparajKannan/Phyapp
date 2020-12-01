@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waterback"
+    tools:context=".RequestServiceActivity"
+    android:focusableInTouchMode="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        >
+        <ScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/red">
+
+
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:id="@+id/lenreq"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nam_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:theme="@style/TextLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:textColorHint="#000000"
+                    android:inputType="textEmailAddress"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="97dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/num_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nam_til"
+                android:layout_margin="10dp"
+                android:theme="@style/TextLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:maxLength="10"
+                    android:textColorHint="#000000"
+                    android:inputType="phone"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="97dp" />
+            </com.google.android.material.textfield.TextInputLayout> <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/num_till"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nam_til"
+                android:layout_margin="10dp"
+                android:theme="@style/TextLabel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nums"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"
+                    android:textColorHint="#000000"
+                    android:inputType="textEmailAddress"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="97dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/comment"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/lenreq"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Send Your Queries :"
+                    android:paddingLeft="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    tools:fontFamily="@font/arima_madurai_bold"/>
+                <EditText
+                    android:background="@drawable/textbackground"
+                    android:id="@+id/edit_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="4"
+                    android:layout_margin="5dp"
+                    android:lines="5"
+                    android:maxLines="6"
+                    android:textSize="14sp"
+                    android:scrollbars="vertical"
+                    android:gravity="top|left"
+                    />
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/conforme"
+                android:layout_below="@id/comment"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Request Services"
+                android:background="@drawable/button2"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:textColor="#FFFFFF"/>
+
+
+
+
+        </RelativeLayout>
+
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

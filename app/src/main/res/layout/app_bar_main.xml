@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.phyapp.root.physiotherapy.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/apps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+        <com.google.android.material.tabs.TabLayout
+            android:visibility="gone"
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:tabMode="scrollable"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#FFFFFF"
+            app:tabIndicatorHeight="2dp"
+            style="@style/MyTabLayoutTextAppearance"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!--<TextView
+        android:id="@+id/location_text"
+        android:layout_below="@id/apps"
+        android:layout_above="@+id/frm"
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />-->
+
+    <FrameLayout
+        android:id="@+id/frm"
+        android:layout_below="@+id/apps"
+        android:layout_above="@+id/slidingtabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@+id/apps"
+        android:id="@+id/viewpager2"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/slidingtabs"
+        >
+    </androidx.viewpager.widget.ViewPager>
+ <androidx.viewpager.widget.ViewPager
+        android:layout_below="@+id/apps"
+        android:id="@+id/viewpager1"
+     android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/slidingtabs"
+       >
+
+    </androidx.viewpager.widget.ViewPager>
+
+      <!-- <include layout="@layout/content_main" />-->
+
+
+  <!--  app:tabSelectedTextColor="@color/color1"
+    app:tabTextColor="@color/color2"-->
+  <!--  <android.support.design.widget.TabLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/slidingtabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Red"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#FFFFFF"
+        />-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/slidingtabs"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/Red"
+        app:itemIconTint="@color/tabs"
+        app:itemTextColor="@color/tabs"
+        app:elevation="10dp"
+        app:menu="@menu/bottom_navigation_home" />
+
+
+</RelativeLayout>

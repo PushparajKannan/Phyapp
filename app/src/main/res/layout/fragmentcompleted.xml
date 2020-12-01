@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waterback"
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <ImageView
+        android:id="@+id/low"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/lowlogo"
+        />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/comrecycle"
+            android:elevation="10dp"
+            android:drawSelectorOnTop="true"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/empty"
+        android:layout_below="@+id/low"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:elevation="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="NO PENDING "
+            android:textSize="30sp"
+            android:textColor="#9F2927"
+            android:fontFamily="@font/olga"/>
+
+        <TextView
+            android:elevation="5dp"
+            android:layout_below="@id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="SERVICES"
+            android:textSize="30sp"
+            android:textColor="#29166F"
+            android:fontFamily="@font/olga"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+    <!--android:layoutAnimation="@anim/layout_animation_from_right"-->

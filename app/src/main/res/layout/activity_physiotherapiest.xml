@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waterback"
+    tools:context=".PhysiotherapiestActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/orange">
+
+
+            <ScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+<!--
+
+            <Button
+                android:id="@+id/phy_asknumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btncurveornge"
+                android:clickable="true"
+                android:textColor="#FFFFFF"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:text="Full Patient Detail's"
+                />
+-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="PATIENT DETAILS"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/arima_madurai_bold"
+                       />
+
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/patient_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:elevation="10dp"
+                        >
+
+                        <TextView
+                            android:drawableLeft="@drawable/ic_person"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:text="Name"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            tools:fontFamily="@font/arima_madurai_bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_weight="0.03"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/pad_name"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:textSize="13sp"
+                            android:paddingLeft="10dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/patient_service"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:elevation="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/ic_notifications_black_24dp"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:text="Service"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            tools:fontFamily="@font/arima_madurai_bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.03"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/pad_ser"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/headingtext"
+                        android:id="@+id/patient_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:elevation="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:drawableLeft="@drawable/ic_today_black_24dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Date"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            tools:fontFamily="@font/arima_madurai_bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.03"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/pad_date"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:paddingLeft="10dp"
+                            android:textSize="13sp"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/headingtext"
+                        android:id="@+id/patient_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:elevation="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:text="Time"
+                            android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            tools:fontFamily="@font/arima_madurai_bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.03"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/pad_tim"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:textSize="13sp"
+                            android:paddingLeft="10dp"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/headingtext"
+                        android:id="@+id/patient_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:elevation="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:text="Address"
+                            android:drawableLeft="@drawable/ic_person_pin_circle_black_24"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            tools:fontFamily="@font/arima_madurai_bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.03"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/pad_add"
+                            android:textSize="13sp"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:paddingLeft="10dp"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+                    </LinearLayout>
+
+
+  <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/headingtext"
+                        android:id="@+id/ask_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:elevation="10dp"
+      android:visibility="gone"
+                        >
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1">
+
+                        <TextView
+                            android:elevation="5dp"
+                           android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="Ask Number"
+                            android:background="#90FFFFFF"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            tools:fontFamily="@font/arima_madurai_bold" />
+      </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.03"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:textSize="13sp"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:paddingLeft="10dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:text="7845xxxxxx"/>
+
+                    </LinearLayout>
+
+ <LinearLayout
+
+
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/headingtext"
+                        android:id="@+id/set_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+     android:animateLayoutChanges="true"
+                        android:elevation="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:text="Number"
+                            android:drawableLeft="@drawable/ic_local_phone_black_18dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            tools:fontFamily="@font/arima_madurai_bold" />
+     <LinearLayout
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="2"
+         android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.03"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:animateLayoutChanges="true"
+                            android:id="@+id/old_numbers"
+                            android:textSize="13sp"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:paddingLeft="10dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:text="XXXXXXXXX"/>
+     <TextView
+         android:animateLayoutChanges="true"
+         android:visibility="gone"
+         android:id="@+id/set_number"
+         android:textSize="13sp"
+         android:layout_width="0dp"
+         android:layout_weight="2"
+         android:paddingLeft="10dp"
+         android:layout_gravity="center"
+         android:layout_height="wrap_content"
+         />
+
+         <ImageView
+             android:animateLayoutChanges="true"
+             android:id="@+id/imgview_number"
+             android:layout_width="20dp"
+             android:layout_height="match_parent"
+             android:layout_gravity="center"
+             android:layout_marginRight="5dp"
+             android:src="@drawable/ic_remove_red_eye_black_24dp" />
+         <TextView
+             android:id="@+id/call_patient"
+            android:visibility="gone"
+             android:drawableLeft="@drawable/ic_local_phone_red_16dp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawablePadding="5dp"
+             android:text="Call"
+             android:background="@drawable/buttonmini"
+             android:textColor="#dd0000"/>
+     </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+<!--
+
+                    <LinearLayout
+
+
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/headingtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:animateLayoutChanges="true"
+                        android:elevation="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:text="Ping"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="15sp"
+                            tools:fontFamily="@font/arima_madurai_bold" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.03"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:textSize="13sp"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:paddingLeft="10dp"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/ic_room_black_24dp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+-->
+
+
+                    <LinearLayout
+                        android:layout_marginTop="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/get_direction"
+                                android:elevation="2dp"
+                                android:layout_width="170dp"
+                                android:layout_height="30dp"
+                                android:text="GET DIRECTION"
+                                android:gravity="center"
+                                android:textColor="#FFFFFF"
+                                android:background="@drawable/buttonorange"
+                                android:layout_gravity="center"
+                                android:drawableRight="@drawable/ic_room_black_24dp"/>
+
+
+
+                            <TextView
+                              android:visibility="gone"
+                                android:id="@+id/recahedlocation"
+                                android:elevation="5dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:gravity="center"
+                                android:text="Click If Location Reached"
+                                android:background="@drawable/buttonmini"
+                                android:textColor="#dd0000"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+                </RelativeLayout>
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

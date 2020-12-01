@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waterback"
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="2dp"
+    app:cardBackgroundColor="#90ffffff"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/loworiginal"/>
+
+
+        <Button
+            android:id="@+id/conforme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/button2"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="30dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/pro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Physiotherapy product"
+            android:background="@drawable/button2"
+            android:layout_above="@id/pro1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="15dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:textColor="#FFFFFF"/>
+
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/pro1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ortho Dr.Appointment"
+            android:background="@drawable/button2"
+            android:layout_above="@id/pro2"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="15dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/pro2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diet"
+            android:background="@drawable/button2"
+            android:layout_above="@id/conforot"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="15dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:textColor="#FFFFFF"/>
+
+ <Button
+     android:id="@+id/conforot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+     android:foreground="?attr/selectableItemBackgroundBorderless"
+     android:layout_alignParentBottom="true"
+     android:background="@drawable/button2"
+     android:layout_marginLeft="50dp"
+     android:layout_marginRight="50dp"
+     android:layout_marginBottom="30dp"
+     android:textColor="#FFFFFF"
+     />
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>

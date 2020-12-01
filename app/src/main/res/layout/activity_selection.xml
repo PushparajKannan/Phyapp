@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waterback"
+    tools:context=".SelectionActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/seltimg"
+                android:layout_alignParentEnd="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/physs"
+                />
+
+
+
+
+            <ImageView
+                android:id="@+id/select_logo"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+android:layout_marginTop="100dp"
+                android:layout_centerHorizontal="true"
+
+                android:src="@drawable/lowlogo"
+                />
+
+            <LinearLayout
+                android:layout_below="@id/select_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:elevation="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="PHY "
+                android:textSize="40sp"
+                android:textColor="#9F2927"
+                android:fontFamily="@font/olga"/>
+
+            <TextView
+                android:elevation="5dp"
+                android:layout_below="@id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="APP "
+                android:textSize="40sp"
+                android:textColor="#29166F"
+                android:fontFamily="@font/olga"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+               android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@id/select_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+
+                <Button
+                    android:visibility="gone"
+
+                    android:id="@+id/select_button2"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button2"
+                    android:text="Physiotherapist "
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:textColor="#ffffff"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    />
+                <Button
+                    android:id="@+id/select_button1"
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button2"
+                    android:clickable="true"
+                    android:textSize="12sp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:padding="10dp"
+                    android:textColor="#ffffff"
+                    android:text="Login as patient"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+    <!--bottom sheet container-->
+    <FrameLayout
+        android:id="@+id/framelayout_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/bottom_sheet_behavior" />
+
+
+    
+
+</RelativeLayout>

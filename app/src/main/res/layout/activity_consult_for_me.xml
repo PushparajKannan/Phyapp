@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waterback"
+    tools:context="com.phyapp.root.physiotherapy.ConsultForMeActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp">
+        <RelativeLayout
+            android:background="@drawable/orange"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<Button
+                android:elevation="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />-->
+            <Button
+                android:id="@+id/needcon"
+                android:background="@drawable/buttonorange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                android:textColor="#FFFFFF"
+                android:text="Need Consultant For"
+                android:gravity="center"/>
+            <!--<FrameLayout
+                android:id="@+id/listre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/needcon"
+                android:layout_margin="15dp">
+
+
+            </FrameLayout>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/clists"
+                android:elevation="10dp"
+                android:drawSelectorOnTop="true"
+                android:layout_below="@+id/needcon"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

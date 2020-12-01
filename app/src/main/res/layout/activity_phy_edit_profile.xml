@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/waterback">
+
+    <ScrollView
+        android:elevation="2dp"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+       >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="#99FFFFFF">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <LinearLayout
+                android:id="@+id/img_Phy_profile"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/Phy_profile_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_person"
+                        android:elevation="5dp"
+                        app:civ_border_color="#dd0000"
+                        app:civ_border_width="5dp" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/edimg"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="70dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="124dp"
+                        android:src="@drawable/ic_edit_black_24dp"
+                        app:backgroundTint="#F3F3F3"
+                        app:elevation="6dp"
+                        app:fabSize="mini" />
+
+                </RelativeLayout>
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wiliam Snoe"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="21sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                app:cardElevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardBackgroundColor="#dd0000">
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phy_namwe"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:theme="@style/TextLabel1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="First Name"
+                        android:textColorHint="#dd0000"
+                        android:inputType="textEmailAddress"
+                        android:drawableRight="@drawable/ic_person_red_24dp"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="97dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phy_namwe_last"
+                    android:layout_below="@id/phy_namwe"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:theme="@style/TextLabel1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_last"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Last Name"
+                        android:textColorHint="#dd0000"
+                        android:inputType="textEmailAddress"
+                        android:drawableRight="@drawable/ic_person_red_24dp"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="97dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phy_phone"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/phy_namwe_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:theme="@style/TextLabel1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone"
+                        android:textColorHint="#dd0000"
+                        android:drawableRight="@drawable/ic_phone_red_24dp"
+                        android:inputType="phone"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="97dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phy_mail"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/phy_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:theme="@style/TextLabel1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mail Id"
+                                                android:drawableRight="@drawable/ic_mail_red_24dp"
+                        android:textColorHint="#dd0000"
+                        android:inputType="textEmailAddress"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="97dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/phy_mail"
+                    android:id="@+id/relphy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:elevation="5dp"
+                        android:id="@+id/lenimap"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/location_phy"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:theme="@style/TextLabel1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        android:textColorHint="#dd0000"
+                        android:inputType="textEmailAddress"
+                        android:drawableRight="@drawable/ic_place_red_24dp"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="97dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_below="@id/relphy"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="80dp"
+                    android:gravity="center"
+                    android:elevation="5dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/mapproceedbtn"
+                    android:text="save"
+                    android:textColor="#ffffff"/>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabsave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true"
+        app:backgroundTint="#dd0000"
+        android:elevation="5dp"
+        app:fabSize="mini"
+        android:src="@drawable/ic_done_white_24dp"/>
+
+<ImageView
+    android:elevation="-5dp"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:src="@drawable/loworiginal"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

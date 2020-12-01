@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+    <ImageView
+
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/buttonshape"
+        />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tvslogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Put yourself in our hands.
+Let our years of expertise help you get back on track"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/RadioLL"
+            android:layout_margin="20dp"
+            android:layout_below="@id/tvslogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+          <!--  <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LANGUAGE SELECTION"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:checkedButton="@id/english"
+                >
+                <RadioButton
+                    android:id="@+id/tamil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" தமிழ்"
+                    android:textSize="17dp"
+                    android:textColor="#FFFFFF"
+                    />
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Or"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"/>
+                <RadioButton
+                    android:id="@+id/english"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ENGLISH"
+                    android:textColor="#FFFFFF"/>
+
+
+
+
+            </RadioGroup>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+<!--
+        <Button
+            android:id="@+id/btnok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="button"/>-->
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="ok"
+            android:gravity="center"/>-->
+    </RelativeLayout>
+
+
+</LinearLayout>

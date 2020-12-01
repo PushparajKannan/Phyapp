@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/waterback">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/orange">
+
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/image_des"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                />
+
+                <View
+                    android:layout_below="@id/image_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffffff"/>
+
+
+
+            <ScrollView
+                android:layout_below="@id/image_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+               <!-- <TextView
+                    android:id="@+id/txtTabItemNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:gravity="center"
+                    />
+
+-->
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txtTabItemNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Orthopaedic surgery"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_margin="20dp"/>
+                <TextView
+                    android:id="@+id/textpara"
+                    android:layout_below="@+id/txtTabItemNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="@string/para"/>
+
+
+
+            </RelativeLayout>
+
+            </ScrollView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

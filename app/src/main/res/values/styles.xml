@@ -1,0 +1,183 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Red</item>
+        <item name="colorPrimaryDark">@color/DarkRed</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeGreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#1EB917</item>
+        <item name="colorPrimaryDark">#1A8D16</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <!--<item name="android:textColorHint">#FFFFFF</item>-->
+        <!--<item name="android:textSize">18sp</item>-->
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <!--<item name="colorAccent">#FFFFFF</item>
+        <item name="colorControlNormal">#FFFFFF</item>-->
+        <item name="colorControlActivated">#000000</item>
+        <item name="colorControlHighlight">@android:color/black</item>
+    </style>
+
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">6sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@drawable/buttonshape</item>
+
+        <item name="android:textColor">@android:color/white</item>
+        <item name="colorPrimary">@color/Red</item>
+        <item name="colorPrimaryDark">@color/DarkRed</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="CustomTextStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <!--   <item name="android:background">YOUR BACKGROUND COLOR</item>-->
+        <item name="tabTextAppearance">@style/CustomTextStyle</item>
+        <!--<item name="tabSelectedTextColor">SELECTED TAB TEXT COLOR</item>
+        <item name="tabIndicatorColor">SELECTED TAB INDICATOR COLOR</item>-->
+    </style>
+
+    <style name="CollapsedAppBar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+<!--    spotdaialog custom theme-->
+
+    <style name="Custom" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">Loading...</item>
+        <item name="DialogSpotColor">@color/Red</item>
+        <item name="DialogSpotCount">4</item>
+
+    </style>
+
+
+    <style name="Customsss" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">Loading…</item>
+        <item name="DialogSpotColor">@color/Red</item>
+        <item name="DialogSpotCount">4</item>
+    </style>
+
+
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--buttons color-->
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+        <!--title and message color-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--dialog background-->
+        <item name="android:windowBackground">@drawable/background_dialog</item>
+    </style>
+
+ <style name="CustomDialogThemessss" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--buttons color-->
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+        <!--title and message color-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--dialog background-->
+        <item name="android:windowBackground">@drawable/background_dialog</item>
+    </style>
+
+    <!--
+
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+       &lt;!&ndash; <item name="tabMaxWidth"></item>&ndash;&gt;
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+-->
+
+
+    <!--<style name="FullScreenDialogStyle" parent="android:theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>-->
+    <style name="TextLabel1" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <!--<item name="android:textColorHint">#FFFFFF</item>-->
+        <!--<item name="android:textSize">18sp</item>-->
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <!--<item name="colorAccent">#FFFFFF</item>-->
+        <item name="colorControlNormal">#dd0000</item>
+        <item name="colorControlActivated">#dd0000</item>
+        <item name="colorControlHighlight">#dd0000</item>
+    </style>
+
+    <style name="CustomDialogAnimationss" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/CustomDialogAnimation</item>
+    </style>
+
+    <style name="CustomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/move_up</item>
+        <item name="android:windowExitAnimation">@anim/move_down</item>
+    </style>
+
+
+
+
+
+    <style name="dialog_animation">
+
+        <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+
+    </style>
+
+
+<style name="dialog_animation2">
+
+        <item name="android:windowEnterAnimation">@anim/move_up</item>
+
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+
+    </style>
+
+<style name="dialog_zoomin_zoomout">
+
+        <item name="android:windowEnterAnimation">@anim/move_up</item>
+
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+
+    </style>
+
+
+
+</resources>

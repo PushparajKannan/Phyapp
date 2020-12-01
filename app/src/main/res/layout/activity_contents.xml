@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waterback"
+    tools:context="com.phyapp.root.physiotherapy.ContentsActivity"
+    >
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:elevation="10dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/orange"
+
+       >
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/lowlogo"
+
+            />
+
+        <TextView
+            android:id="@+id/text_aggrement"
+            android:layout_marginTop="180dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Physiotherapy"
+            android:gravity="center"/>
+
+
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_aggrement"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/buttonorange"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:shadowRadius="25"
+                android:text="Login"
+                android:textColor="#FFEBF3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+
+
+<Button
+                android:id="@+id/newregister"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/buttonorange"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="25"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:text="Register"
+                android:textColor="#FFEBF3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+
+
+           <!-- <LinearLayout
+                android:id="@+id/LL_ca"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp">
+                <CheckBox
+                    android:id="@+id/checkboxs"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:singleLine="false"
+                    android:text="I Agreed to Physiotherapy's Terms and conditions " />
+
+
+            </LinearLayout>-->
+
+
+
+
+
+
+   <!-- <Button
+        android:id="@+id/Login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#8676A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="25"
+        android:text="Signup"
+        android:textColor="#FFEBF3" />
+    <Button
+        android:id="@+id/Regbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Login_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#8676A8"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="25"
+        android:text="Login"
+        android:textColor="#FFEBF3"
+        />
+
+        <Button
+        android:id="@+id/Term_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Regbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#8676A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="25"
+        android:text="Login"
+        android:textColor="#FFEBF3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+        />
+-->
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>

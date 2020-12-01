@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".ServiceActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/waterback">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:elevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/red">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_marginTop="40dp"
+                            android:id="@+id/service_Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:elevation="10dp"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:text="Service Name"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp"
+                                tools:fontFamily="@font/arima_madurai_bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:layout_weight="0.03"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/servdoc_name"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@+id/service_Name"
+                            android:id="@+id/phy_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:elevation="10dp"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:text="Physiotherapist name"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp"
+                                tools:fontFamily="@font/arima_madurai_bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:layout_weight="0.03"
+                                android:layout_gravity="center"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/servdoc_doctor"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@+id/phy_name"
+                            android:id="@+id/visit_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:elevation="10dp"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:text="Visiting Time"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp"
+                                tools:fontFamily="@font/arima_madurai_bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:layout_weight="0.03"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/servdoc_time"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+ <LinearLayout
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@+id/visit_time"
+                            android:id="@+id/visit_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:elevation="10dp"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:text="Date"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp"
+                                tools:fontFamily="@font/arima_madurai_bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:layout_weight="0.03"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/servdoc_date"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@+id/visit_date"
+                            android:id="@+id/location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            android:elevation="10dp"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:text="Address"
+                                android:textColor="@android:color/black"
+                                android:textSize="15sp"
+                                tools:fontFamily="@font/arima_madurai_bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=":"
+                                android:layout_weight="0.03"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:id="@+id/servdoc_locati"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:layout_height="wrap_content"
+                                />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/comment"
+                            android:layout_marginTop="30dp"
+                            android:layout_below="@id/location"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginRight="6dp"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Comments :"
+                                android:paddingLeft="5dp"
+                                android:textSize="15sp"
+                                android:textColor="@android:color/black"
+                                tools:fontFamily="@font/arima_madurai_bold"/>
+                            <EditText
+                                android:background="@drawable/textbackground"
+                                android:id="@+id/edit_comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textMultiLine"
+                               android:minLines="4"
+                                android:layout_margin="5dp"
+                                android:lines="5"
+                                android:maxLines="6"
+                                android:textSize="14sp"
+                                android:scrollbars="vertical"
+                                android:gravity="top|left"
+                                />
+
+
+
+                        </LinearLayout>
+
+<!--
+                        <Button
+                            android:id="@+id/conforot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Consult For Others"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/button2"
+                            android:layout_margin="50dp"
+                            android:textColor="#FFFFFF"
+                            />-->
+
+                        <TextView
+                            android:id="@+id/serv_conf"
+                            android:layout_marginTop="15dp"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button2"
+                            android:text="Confrim"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/comment"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:elevation="5dp"
+                            android:layout_marginBottom="20dp"/>
+
+
+
+
+
+
+
+
+
+
+                    </RelativeLayout>
+
+
+                </ScrollView>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

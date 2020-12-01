@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/red"
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/clist"
+        android:drawSelectorOnTop="true"
+        android:background="#D0D0D0"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/orange"
+            >
+
+            <TextView
+                android:id="@+id/txthead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Orthopaedic surgery"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_margin="20dp"/>
+            <TextView
+                android:id="@+id/textpara"
+                android:layout_below="@+id/txthead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/para"/>
+
+
+        </RelativeLayout>
+
+
+
+            <WebView
+                android:id="@+id/webview_help"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </WebView>
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

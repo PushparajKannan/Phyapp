@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="@drawable/backdia">
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+
+    <TextView
+        android:id="@+id/con_me"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:background="@drawable/buttonstyle"
+        android:text="Exercises"
+        android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:padding="4dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:elevation="2dp"
+        />
+
+    <TextView
+        android:id="@+id/con_oth"
+        android:layout_below="@id/con_me"
+        android:layout_marginTop="20dp"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:background="@drawable/buttonstyle"
+        android:text="Dr. Appintments"
+        android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:padding="4dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:elevation="2dp"
+        />
+
+        <TextView
+            android:id="@+id/con_me2"
+            android:layout_below="@id/con_oth"
+            android:layout_marginTop="20dp"
+            android:layout_margin="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:background="@drawable/buttonstyle"
+            android:text="Diet Advice"
+            android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:padding="4dp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:elevation="2dp"
+            />
+
+        <TextView
+            android:id="@+id/con_oth2"
+            android:layout_below="@id/con_me2"
+            android:layout_marginTop="20dp"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:background="@drawable/buttonstyle"
+            android:text="Laboratory services"
+            android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:padding="4dp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:elevation="2dp"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

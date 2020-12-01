@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/waterback"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainCategoreyActivity"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/green"
+            >
+
+            <Button
+                android:id="@+id/sss"
+                android:background="@drawable/buttonshape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp"
+                android:textColor="#FFFFFF"
+                android:text="Need Consultant For"
+                android:gravity="center"/>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/consulists"
+                android:layout_below="@id/sss"
+                android:elevation="10dp"
+                android:drawSelectorOnTop="true"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+</RelativeLayout>
