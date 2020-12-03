@@ -25,7 +25,6 @@ import android.widget.TextView;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.READ_PHONE_STATE;
 
 public class OTPLoginActivity extends AppCompatActivity {
 
@@ -131,10 +130,11 @@ public class OTPLoginActivity extends AppCompatActivity {
 
                     boolean locationAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                     boolean cameraAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
-                    boolean contactAccepted = grantResults[2] == PackageManager.PERMISSION_GRANTED;
-                    boolean callAccepted = grantResults[3] == PackageManager.PERMISSION_GRANTED;
+                  //  boolean contactAccepted = grantResults[2] == PackageManager.PERMISSION_GRANTED;
+                    //boolean callAccepted = grantResults[3] == PackageManager.PERMISSION_GRANTED;
 
-                    if (locationAccepted && cameraAccepted && contactAccepted && callAccepted)
+                   // if (locationAccepted && cameraAccepted && contactAccepted && callAccepted)
+                    if (locationAccepted && cameraAccepted)
                     {
 
                     }
@@ -150,7 +150,7 @@ public class OTPLoginActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                                                    requestPermissions(new String[]{ACCESS_FINE_LOCATION, CAMERA,READ_PHONE_STATE,CALL_PHONE},
+                                                    requestPermissions(new String[]{ACCESS_FINE_LOCATION, CAMERA},
                                                             PERMISSION_REQUEST_CODE);
                                                 }
                                             }
@@ -180,15 +180,16 @@ public class OTPLoginActivity extends AppCompatActivity {
     private boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_FINE_LOCATION);
         int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), CAMERA);
-        int result2 = ContextCompat.checkSelfPermission(getApplicationContext(), READ_PHONE_STATE);
-        int result3= ContextCompat.checkSelfPermission(getApplicationContext(),CALL_PHONE);
+        //int result2 = ContextCompat.checkSelfPermission(getApplicationContext(), READ_PHONE_STATE);
+       // int result3= ContextCompat.checkSelfPermission(getApplicationContext(),CALL_PHONE);
 
-        return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED && result2== PackageManager.PERMISSION_GRANTED && result3==PackageManager.PERMISSION_GRANTED;
+       // return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED && result2== PackageManager.PERMISSION_GRANTED && result3==PackageManager.PERMISSION_GRANTED;
+        return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED;
     }
 
     private void requestPermission() {
 
-        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION, CAMERA,READ_PHONE_STATE,CALL_PHONE}, PERMISSION_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION, CAMERA}, PERMISSION_REQUEST_CODE);
 
     }
 

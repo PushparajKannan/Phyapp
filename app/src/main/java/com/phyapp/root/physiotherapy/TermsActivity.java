@@ -19,9 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
-import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.CAMERA;
-import static android.Manifest.permission.READ_PHONE_STATE;
 
 public class TermsActivity extends AppCompatActivity {
     CheckBox checkBox;
@@ -112,7 +110,7 @@ public class TermsActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                                                    requestPermissions(new String[]{ACCESS_FINE_LOCATION, CAMERA,READ_PHONE_STATE,CALL_PHONE},
+                                                    requestPermissions(new String[]{ACCESS_FINE_LOCATION, CAMERA},
                                                             PERMISSION_REQUEST_CODE);
                                                 }
                                             }
@@ -142,15 +140,16 @@ public class TermsActivity extends AppCompatActivity {
     private boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_FINE_LOCATION);
         int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), CAMERA);
-        int result2 = ContextCompat.checkSelfPermission(getApplicationContext(), READ_PHONE_STATE);
-        int result3= ContextCompat.checkSelfPermission(getApplicationContext(),CALL_PHONE);
+       // int result2 = ContextCompat.checkSelfPermission(getApplicationContext(), READ_PHONE_STATE);
+        //int result3= ContextCompat.checkSelfPermission(getApplicationContext(),CALL_PHONE);
 
-        return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED && result2== PackageManager.PERMISSION_GRANTED && result3==PackageManager.PERMISSION_GRANTED;
+       // return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED && result2== PackageManager.PERMISSION_GRANTED && result3==PackageManager.PERMISSION_GRANTED;
+        return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED;
     }
 
     private void requestPermission() {
 
-        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION, CAMERA,READ_PHONE_STATE,CALL_PHONE}, PERMISSION_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION, CAMERA}, PERMISSION_REQUEST_CODE);
 
     }
 

@@ -94,7 +94,7 @@ public class E1Fragment extends Fragment{
         pDialog.setCancelable(false);
 
 
-        showpDialog();
+       // showpDialog();
 
 
 
@@ -218,7 +218,7 @@ public class E1Fragment extends Fragment{
                             sucess=response.getString("success");
                             error=response.getString("error");
 
-                           hidepDialog();
+                          // hidepDialog();
 
 
                             if(sucess.equals("1")){
@@ -306,7 +306,7 @@ public class E1Fragment extends Fragment{
                     public void onErrorResponse(VolleyError error) {
                         Log.d("Error.Response", error.toString());
 
-                        hidepDialog();
+                      //  hidepDialog();
 
 
 

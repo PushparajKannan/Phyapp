@@ -1919,7 +1919,7 @@ else if(tab.getPosition()==2){
     }
 
 
-    public boolean isPermissionGranted() {
+   /* public boolean isPermissionGranted() {
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(android.Manifest.permission.CALL_PHONE)
                     == PackageManager.PERMISSION_GRANTED) {
@@ -1935,7 +1935,7 @@ else if(tab.getPosition()==2){
             Log.v("TAG", "Permission is granted");
             return true;
         }
-    }
+    }*/
 
 
     @Override
@@ -1962,6 +1962,11 @@ else if(tab.getPosition()==2){
 
     public void call_action() {
         // String phnum = etPhoneno.getText().toString();
+
+        String phone = "+34666777888";
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+        startActivity(intent);
+
         Intent callIntent = new Intent(Intent.ACTION_DIAL);
         callIntent.setData(Uri.parse("tel:" + ""));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {

@@ -273,15 +273,16 @@ public class PhyLoginActivity extends AppCompatActivity {
 
                     boolean locationAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                     boolean cameraAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
-                    boolean contactAccepted = grantResults[2] == PackageManager.PERMISSION_GRANTED;
-                    boolean callAccepted = grantResults[3] == PackageManager.PERMISSION_GRANTED;
-                    boolean Readstorage = grantResults[4] == PackageManager.PERMISSION_GRANTED;
-                    boolean writStorage = grantResults[5] == PackageManager.PERMISSION_GRANTED;
-                    boolean Readsms = grantResults[6] == PackageManager.PERMISSION_GRANTED;
-                    boolean SendSms = grantResults[7] == PackageManager.PERMISSION_GRANTED;
-                    boolean ReceiveSms = grantResults[8] == PackageManager.PERMISSION_GRANTED;
+                    //boolean contactAccepted = grantResults[2] == PackageManager.PERMISSION_GRANTED;
+                  //  boolean callAccepted = grantResults[3] == PackageManager.PERMISSION_GRANTED;
+                    boolean Readstorage = grantResults[2] == PackageManager.PERMISSION_GRANTED;
+                    boolean writStorage = grantResults[3] == PackageManager.PERMISSION_GRANTED;
+                   // boolean Readsms = grantResults[6] == PackageManager.PERMISSION_GRANTED;
+                    //boolean SendSms = grantResults[7] == PackageManager.PERMISSION_GRANTED;
+                    //boolean ReceiveSms = grantResults[8] == PackageManager.PERMISSION_GRANTED;
 
-                    if (locationAccepted && cameraAccepted && contactAccepted && callAccepted && Readstorage && writStorage && Readsms && ReceiveSms && SendSms)
+                  //  if (locationAccepted && cameraAccepted && contactAccepted && callAccepted && Readstorage && writStorage && Readsms && ReceiveSms && SendSms)
+                    if (locationAccepted && cameraAccepted   && Readstorage && writStorage )
                     {
 
                     }
@@ -297,7 +298,7 @@ public class PhyLoginActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                                                    requestPermissions(new String[]{ACCESS_FINE_LOCATION,WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE, CAMERA,READ_PHONE_STATE,CALL_PHONE,READ_SMS,SEND_SMS,RECEIVE_SMS},
+                                                    requestPermissions(new String[]{ACCESS_FINE_LOCATION,WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE, CAMERA},
                                                             PERMISSION_REQUEST_CODE);
                                                 }
                                             }
@@ -327,29 +328,29 @@ public class PhyLoginActivity extends AppCompatActivity {
     private boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_FINE_LOCATION);
         int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), CAMERA);
-        int result2 = ContextCompat.checkSelfPermission(getApplicationContext(), READ_PHONE_STATE);
-        int result3= ContextCompat.checkSelfPermission(getApplicationContext(),CALL_PHONE);
+        //int result2 = ContextCompat.checkSelfPermission(getApplicationContext(), READ_PHONE_STATE);
+        //int result3= ContextCompat.checkSelfPermission(getApplicationContext(),CALL_PHONE);
         int result4 = ContextCompat.checkSelfPermission(getApplicationContext(), WRITE_EXTERNAL_STORAGE);
         int result5 = ContextCompat.checkSelfPermission(getApplicationContext(), READ_EXTERNAL_STORAGE);
-        int result6 = ContextCompat.checkSelfPermission(getApplicationContext(), READ_SMS);
-        int result7 = ContextCompat.checkSelfPermission(getApplicationContext(), SEND_SMS);
-        int result8 = ContextCompat.checkSelfPermission(getApplicationContext(), RECEIVE_SMS);
+       // int result6 = ContextCompat.checkSelfPermission(getApplicationContext(), READ_SMS);
+       // int result7 = ContextCompat.checkSelfPermission(getApplicationContext(), SEND_SMS);
+       // int result8 = ContextCompat.checkSelfPermission(getApplicationContext(), RECEIVE_SMS);
 
 
         return result == PackageManager.PERMISSION_GRANTED &&
                 result1 == PackageManager.PERMISSION_GRANTED &&
-                result2== PackageManager.PERMISSION_GRANTED &&
-                result3==PackageManager.PERMISSION_GRANTED &&
+              //  result2== PackageManager.PERMISSION_GRANTED &&
+               // result3==PackageManager.PERMISSION_GRANTED &&
                 result4==PackageManager.PERMISSION_GRANTED &&
-                result5==PackageManager.PERMISSION_GRANTED &&
-                result6==PackageManager.PERMISSION_GRANTED &&
-                result7==PackageManager.PERMISSION_GRANTED &&
-                result8==PackageManager.PERMISSION_GRANTED;
+                result5==PackageManager.PERMISSION_GRANTED ;
+               // result6==PackageManager.PERMISSION_GRANTED &&
+               // result7==PackageManager.PERMISSION_GRANTED &&
+                //result8==PackageManager.PERMISSION_GRANTED;
     }
 
     private void requestPermission() {
 
-        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION,WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE, CAMERA,READ_PHONE_STATE,CALL_PHONE,READ_SMS,SEND_SMS,RECEIVE_SMS}, PERMISSION_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION,WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE, CAMERA}, PERMISSION_REQUEST_CODE);
 
     }
 

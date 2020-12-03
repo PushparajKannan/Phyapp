@@ -86,7 +86,7 @@ public class AppointmentActivity extends AppCompatActivity {
     private Object positions=-1;
     EditText getdays;
     Button add;
-    String latituted ="",longitude="";
+    String latituted ="0.0",longitude="0.0";
     String consultfordata,comments;
 
 
